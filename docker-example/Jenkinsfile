@@ -3,10 +3,10 @@ def rtServer, rtDocker, buildInfo, privateDockerRegistry
 pipeline {
     agent { label 'master' }
     parameters {
-        string (name: 'ART_URL', defaultValue: 'http://localhost:8081/artifactory', description: 'Artifactory where artifacts will be deployed/resolved')
+        string (name: 'ART_URL', defaultValue: 'https://artifactoryxraytest.jfrog.io/artifactoryxraytest', description: 'Artifactory where artifacts will be deployed/resolved')
         string (name: 'ART_USER', defaultValue: 'admin', description: 'Artifactory user for deploy/resolve artifacts')
-        string (name: 'ART_PASSWORD', defaultValue: 'password', description: 'Artifactory password for deploy/resolve artifacts')
-        string (name: 'DOCKER_REPO', defaultValue: 'docker', description: 'Docker repository for pull/push')
+        string (name: 'ART_PASSWORD', defaultValue: 'Ip8Lf3Gd9Jr4Ob', description: 'Artifactory password for deploy/resolve artifacts')
+        string (name: 'DOCKER_REPO', defaultValue: 'docker-remote', description: 'Docker repository for pull/push')
         booleanParam (name: 'XRAY_SCAN', defaultValue: false, description: 'Scan artifacts using Xray')
         booleanParam (name: 'FAIL_BUILD', defaultValue: false, description: 'Fail build if any violation is found in Xray')
     }
