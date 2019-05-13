@@ -1,7 +1,7 @@
 def rtServer, rtDocker, buildInfo, privateDockerRegistry
 
 pipeline {
-    agent { label 'master' }
+    agent { label 'docker-test-2' }
     parameters {
         string (name: 'ART_URL', defaultValue: 'https://artifactoryxraytest.jfrog.io/artifactoryxraytest', description: 'Artifactory where artifacts will be deployed/resolved')
         string (name: 'ART_USER', defaultValue: 'admin', description: 'Artifactory user for deploy/resolve artifacts')
